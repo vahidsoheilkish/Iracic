@@ -1,0 +1,19 @@
+
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+
+@import "../files/bootstrap.min.css";
+@import "../files/select2.min.css";
+@import "../files/bootstrap-rtl.min.css";
+@import "../files/bootstrap-select.min.css";
+@import "../files/font-awesome.min.css";
+@import "../files/fontiran.css";
+@import "../files/sweetalert.css";
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}

@@ -1,0 +1,24 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+use Jenssegers\Mongodb\Eloquent\Model  as Eloquent;
+use Jenssegers\Mongodb\Eloquent\HybridRelations;
+
+//class Cities extends Model
+class Cities extends Eloquent
+{
+    use HybridRelations;
+    protected $connection = 'mongodb';
+    protected $primaryKey = "_id";
+    protected $casts = [
+        '_id' => 'string'
+    ];
+
+    protected $guarded = [];
+
+    public function country(){
+        return $this->belongsTo(Countries::class , 'id');
+    }
+}
